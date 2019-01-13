@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2"
+             x:Class="App2.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:StudentListViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lista" ItemsSource="{Binding Student}" SelectedItem="{Binding SelectedStudent}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding NumerIndeksu}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout x:Name="student" BindingContext="{Binding SelectedStudent}">
+                <Entry Text="{Binding Imie, Mode=TwoWay}" />
+                <Entry Text="{Binding Nazwisko, Mode=TwoWay}" />
+                <Label Text="{Binding NumerIndeksu}" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

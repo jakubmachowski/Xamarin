@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage"
+             Title="Kalkulator BMI">
+
+    <StackLayout>
+        <Label Text="Wzrost (cm)" />
+        <Entry x:Name="eHeight" Keyboard="Numeric" TextChanged="EHeight_TextChanged" />
+        <Label Text="Waga (kg)" />
+        <Entry x:Name="eWeight" Keyboard="Numeric" TextChanged="EWeight_TextChanged" />
+        <Button Text="Oblicz BMI" Clicked="Button_Clicked" IsEnabled="False" x:Name="bCalc" />
+        <Label Text="Wynik BMI" x:Name="result" FontSize="Large" />
+    </StackLayout>
+</ContentPage>

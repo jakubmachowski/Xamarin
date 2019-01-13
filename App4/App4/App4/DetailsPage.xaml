@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.DetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Numer indeksu:"/>
+            <Entry x:Name="numerIndeksu"/>
+
+            <Label Text="Imię:"/>
+            <Entry x:Name="imie"/>
+
+            <Label Text="Nazwisko:"/>
+            <Entry x:Name="nazwisko"/>
+
+            <Button Text="Zapisz zmiany" Clicked="buttonZapiszStudenta_Clicked"/>
+            <Button Text="Usuń studenta" Clicked="buttonUsunStudenta_Clicked"/>
+            <Button Text="Zamknij okno" Clicked="buttonZamknij_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

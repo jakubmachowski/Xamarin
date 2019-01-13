@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App4"
+             x:Class="App4.MainPage">
+
+    <StackLayout>
+        <ListView x:Name="list"  ItemSelected="list_ItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding NumerIndeksu}" />
+                            <Label Text="{Binding Imie}" />
+                            <Label Text="{Binding Nazwisko}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Dodaj nowego studenta" x:Name="buttonAdd_Student" Clicked="buttonAddStudent_Clicked" />
+    </StackLayout>
+
+</ContentPage>
